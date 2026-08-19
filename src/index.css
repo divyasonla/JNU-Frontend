@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-magenta: #C00075;
+  --color-magenta-dark: #8E075F;
+  --color-navy: #1F3157;
+  --color-gold: #F59E0B; /* Orange yellow mix */
+  --color-offwhite: #F8F5F9;
+  --color-dark-text: #17233D;
+  --color-footer-bg: #292929;
+}
+
+@layer base {
+  body {
+    @apply antialiased bg-white text-dark-text;
+  }
+}
+
+@layer utilities {
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-marquee {
+    animation: marquee 35s linear infinite;
+  }
+}
