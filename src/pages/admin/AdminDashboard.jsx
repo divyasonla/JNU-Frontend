@@ -154,7 +154,7 @@ const AdminDashboard = () => {
         toast.success('Result updated successfully!');
       } else {
         await api.post('/admin/upload-result', resultForm);
-        toast.success('Result saved successfully in MongoDB!');
+        toast.success('Result saved successfully in Database');
       }
       setResultForm({
         subject: '',
